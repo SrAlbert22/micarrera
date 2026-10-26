@@ -1,0 +1,65 @@
+<!-- Plantilla de Supabase: Authentication → Emails → "Invite user". Asunto: "Te invitaron a MiCarrera 🎓" -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f5fb;padding:32px 12px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:480px;background:#ffffff;border:1px solid #e1e3f0;border-radius:24px;overflow:hidden;">
+        <!-- Encabezado -->
+        <tr>
+          <td align="center" style="background:#232567;background-image:linear-gradient(135deg,#1f2244,#363b8c 55%,#5b63d3);padding:32px 24px 28px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td align="center" valign="middle" width="64" height="64" style="width:64px;height:64px;border-radius:18px;background:#12132a;border:1px solid rgba(255,255,255,0.18);font-size:34px;line-height:64px;text-align:center;">🎓</td></tr></table>
+            <div style="color:#ffffff;font-size:26px;font-weight:800;margin-top:12px;">MiCarrera</div>
+            <div style="color:#c9ccff;font-size:14px;margin-top:2px;">Tu pensum y tu horario, en orden</div>
+          </td>
+        </tr>
+        <!-- Contenido -->
+        <tr>
+          <td style="padding:32px 28px 4px;">
+            <div style="color:#1f2244;font-size:22px;font-weight:700;margin:0 0 8px;">¡Te invitaron a MiCarrera! 🎉</div>
+            <div style="color:#4a4f73;font-size:15px;line-height:1.55;">
+              La app para llevar tu carrera en orden, hecha para universitarios dominicanos.
+            </div>
+          </td>
+        </tr>
+        <!-- Lo que puedes hacer -->
+        <tr>
+          <td style="padding:16px 28px 4px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f5fb;border-radius:16px;">
+              <tr><td style="padding:14px 16px 4px;color:#1f2244;font-size:14px;line-height:1.5;">✅&nbsp; <strong>Tu pensum:</strong> marca lo aprobado y mira cuánto te falta.</td></tr>
+              <tr><td style="padding:4px 16px;color:#1f2244;font-size:14px;line-height:1.5;">📊&nbsp; <strong>Estadísticas:</strong> tu promedio, tus créditos y tu avance.</td></tr>
+              <tr><td style="padding:4px 16px;color:#1f2244;font-size:14px;line-height:1.5;">🗓️&nbsp; <strong>Tu horario:</strong> súbelo con una foto y la app lo arma.</td></tr>
+              <tr><td style="padding:4px 16px 14px;color:#1f2244;font-size:14px;line-height:1.5;">👥&nbsp; <strong>Amigos:</strong> mira qué clases tienen en común.</td></tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Botón (tabla, para que se vea bien en Outlook) -->
+        <tr>
+          <td align="center" style="padding:24px 28px 8px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr>
+                <td align="center" style="border-radius:16px;background:#5b63d3;">
+                  <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:16px 36px;color:#ffffff;font-size:16px;font-weight:700;text-decoration:none;border-radius:16px;">Aceptar invitación</a>
+                </td>
+              </tr>
+            </table>
+            <div style="color:#6b7094;font-size:13px;margin-top:12px;line-height:1.5;">
+              Al entrar, crea tu contraseña para no tener que pedir códigos.<br>Si el enlace vence, pide que te inviten de nuevo.
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:20px 28px 28px;">
+            <div style="border-top:1px solid #e1e3f0;padding-top:18px;color:#6b7094;font-size:12px;line-height:1.5;">
+              ¿El botón no funciona? Copia este enlace en tu navegador:<br>
+              <a href="{{ .ConfirmationURL }}" style="color:#5b63d3;word-break:break-all;">{{ .ConfirmationURL }}</a><br><br>
+              Si no esperabas esta invitación, ignora este correo.
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- Pie -->
+      <div style="color:#9a9ec9;font-size:12px;margin-top:18px;">
+        Creado por Albert Silvestre · <a href="https://micarrera-beta.vercel.app" style="color:#5b63d3;text-decoration:none;">micarrera-beta.vercel.app</a>
+      </div>
+    </td>
+  </tr>
+</table>

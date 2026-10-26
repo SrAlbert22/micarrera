@@ -1,0 +1,48 @@
+<!-- Plantilla de Supabase: Authentication → Emails → "Magic Link". Asunto: "Tu código para entrar: {{ .Token }}" -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f5fb;padding:32px 12px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:480px;background:#ffffff;border:1px solid #e1e3f0;border-radius:24px;overflow:hidden;">
+        <!-- Encabezado -->
+        <tr>
+          <td align="center" style="background:#232567;background-image:linear-gradient(135deg,#1f2244,#363b8c 55%,#5b63d3);padding:32px 24px 28px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td align="center" valign="middle" width="64" height="64" style="width:64px;height:64px;border-radius:18px;background:#12132a;border:1px solid rgba(255,255,255,0.18);font-size:34px;line-height:64px;text-align:center;">🎓</td></tr></table>
+            <div style="color:#ffffff;font-size:26px;font-weight:800;margin-top:12px;">MiCarrera</div>
+            <div style="color:#c9ccff;font-size:14px;margin-top:2px;">Tu pensum y tu horario, en orden</div>
+          </td>
+        </tr>
+        <!-- Contenido -->
+        <tr>
+          <td style="padding:32px 28px 8px;">
+            <div style="color:#1f2244;font-size:22px;font-weight:700;margin:0 0 8px;">Tu código para entrar 🔑</div>
+            <div style="color:#4a4f73;font-size:15px;line-height:1.55;">
+              Escribe este código en la app para entrar a tu cuenta. Después puedes crear
+              una contraseña para no tener que pedir códigos.
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding:20px 28px 8px;">
+            <div style="background:#e8eaff;border:1px solid #c9ccff;border-radius:18px;padding:20px 12px;">
+              <div style="color:#6b7094;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Tu código</div>
+              <div style="color:#363b8c;font-size:38px;font-weight:800;letter-spacing:10px;font-family:'Courier New',Consolas,monospace;margin-top:6px;">{{ .Token }}</div>
+            </div>
+            <div style="color:#6b7094;font-size:13px;margin-top:12px;">El código vence en 1 hora.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:24px 28px 28px;">
+            <div style="border-top:1px solid #e1e3f0;padding-top:18px;color:#6b7094;font-size:13px;line-height:1.5;">
+              🔒 Nunca te pediremos este código por teléfono ni por mensaje.<br>
+              Si no fuiste tú, ignora este correo: nadie puede entrar sin el código.
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- Pie -->
+      <div style="color:#9a9ec9;font-size:12px;margin-top:18px;">
+        Creado por Albert Silvestre · <a href="https://micarrera-beta.vercel.app" style="color:#5b63d3;text-decoration:none;">micarrera-beta.vercel.app</a>
+      </div>
+    </td>
+  </tr>
+</table>

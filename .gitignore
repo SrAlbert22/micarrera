@@ -1,0 +1,18 @@
+# Nunca se suben: llaves, contraseñas y configuración local
+keystore.properties
+*.jks
+*.keystore
+local.properties
+google-services.json
+.env*
+*.apk
+*.aab
+
+# Compilados y dependencias
+node_modules/
+dist/
+build/
+.gradle/
+.kotlin/
+.idea/
+.vercel/
